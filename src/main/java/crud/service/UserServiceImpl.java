@@ -8,10 +8,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 @Service
-@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
 
-    UserDao userDao;
+    private UserDao userDao;
 
     @Autowired
     public UserServiceImpl(UserDao userDao) {
